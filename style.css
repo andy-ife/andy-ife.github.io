@@ -104,3 +104,11 @@ body{
     color:var(--text-color-light);
     padding-bottom: 2%;
 }
+
+.projects-container{
+    padding-top:4%;
+}
+
+.project-card{
+    background-image: url("assets/img/card-background.svg");
+}
