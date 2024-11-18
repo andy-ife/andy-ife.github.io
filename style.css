@@ -35,7 +35,8 @@ body{
 .top-nav{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     padding-bottom:12%;
 }
 
@@ -43,6 +44,8 @@ body{
     display: flex;
     flex-grow: 1;
     align-items:center;
+    padding-right: 3rem;
+    padding-bottom: 2rem;
 }
 
 .name-and-greeting{
@@ -74,8 +77,8 @@ body{
 
 .nav-items{
     display:flex;
-    width:50%;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .nav-items a{
