@@ -29,7 +29,7 @@ body{
     font-family: var(--font-family);
     font-weight: var(--regular);
     font-style: normal;
-    padding: 10% 8%;
+    padding: 10%;
 }
 
 .top-nav{
@@ -112,6 +112,66 @@ body{
 }
 
 .project-card{
-    background-image: url("assets/img/card-background.svg");
     display: flex;
+    background-image: url("assets/img/card-background.svg");
+    background-size: 100% auto;
+    padding: 2em;
+    justify-content: space-between;
+    border-radius: 2em;
+    box-shadow: 0.2em 0.2em 1em #202020;
+    flex-wrap: wrap;
+}
+
+.project-images{
+    display: flex;
+    width: 25%;
+    gap:2em;
+}
+
+.project-icons{
+    width: 10%;
+    max-height: 40%;
+}
+
+.project-screen{
+    max-width: 200px;
+}
+
+.project-content{
+    width:65%;
+}
+
+.project-title{
+    font-size: var(--card-title-font-size);
+    font-weight: var(--regular);
+}
+
+.project-desc{
+    font-size: var(--card-desc-font-size);
+    margin-top: -0.6em;
+    margin-bottom: 2em;
+}
+
+.project-tech-title{
+    font-size: 1.4rem;
+    font-weight: var(--regular);
+}
+
+.project-tech{
+    margin-top: -0.5em;
+    font-size: var(--card-desc-font-size);
+    color:rgb(19, 79, 139);
+    margin-bottom:2em;
+}
+
+.project-links-btn{
+    display: flex;
+    padding: 2% 4%;
+    align-items: center;
+    justify-content: space-between;
+    border:none;
+    border-radius: 2em;
+    color:white;
+    background-color: dodgerblue;
+    gap: 1em;
 }
