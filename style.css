@@ -29,15 +29,15 @@ body{
     font-family: var(--font-family);
     font-weight: var(--regular);
     font-style: normal;
-    padding: 10% 8% 10% 8%;
+    padding: 10% 8%;
 }
 
 .top-nav{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: center;
-    padding-bottom:12%;
+    justify-content: space-between;
+    padding-bottom:5em;
 }
 
 .page-title{
@@ -55,7 +55,6 @@ body{
 
 #avatar{
     width:110px;
-    height:118px;
     padding-right: 2%;
 }
 
@@ -114,4 +113,5 @@ body{
 
 .project-card{
     background-image: url("assets/img/card-background.svg");
+    display: flex;
 }
