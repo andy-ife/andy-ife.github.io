@@ -28,6 +28,14 @@ import tmrEmergency from "@/assets/projects/tmr/G_-_Report_emergencies.jpg";
 import tmrTracking from "@/assets/projects/tmr/H_-_Track_orders.jpg";
 import tmrPrescription from "@/assets/projects/tmr/I_-_Upload_prescription.jpg";
 
+// Keep Nigeria Clean Images
+import kncMap from "@/assets/projects/knc/A_-_Map_view.jpg";
+import kncBinDetails from "@/assets/projects/knc/B_-_Bin_details.jpg";
+import kncAnalytics from "@/assets/projects/knc/C_-_Analytics.jpg";
+import kncAI from "@/assets/projects/knc/D_-_AI_suggestions.jpg";
+import kncLearn from "@/assets/projects/knc/E_-_Learn.jpg";
+import kncLocation from "@/assets/projects/knc/F_-_Location.jpg";
+
 export interface ProjectImage {
   src: string;
   caption: string;
@@ -51,6 +59,7 @@ export interface Project {
     appStore?: string;
     youtube?: string;
     website?: string;
+    github?: string;
     extra?: ProjectLink[];
   };
 }
@@ -105,5 +114,47 @@ The apps have driven significant growth, reaching over 1,200 users in three mont
       ],
     },
   },
-  // Add more projects here following the same structure
+  {
+    id: "keep-nigeria-clean",
+    title: "Keep Nigeria Clean",
+    shortDescription:
+      "An IoT-powered smart waste management system with AI predictions, real-time bin monitoring, and a mobile app for optimizing collection routes in smart cities.",
+    fullDescription: `Municipalities and waste disposal services face challenges such as littering, inefficient collection, and low recycling awareness. This study presents the development of an intelligent system that predicts waste generation rates using an XGBoost regressor. The dataset was built using manually collected data from smart bins and contextual features from existing datasets. The proposed method employs IoT and WiFi connectivity for data monitoring.
+
+Each bin is equipped with sensors that track fill level, air quality, temperature, humidity, and location in real-time, with data transmitted to a cloud server. A mobile application complements the system with a map view of the bins, their statuses, AI predictions, waste trends, and educational materials on recycling and sustainability.
+
+The results from the prototype bins showed efficient power draw (0.37A), providing up to 6 hours of runtime. The mobile app had a launch time of 0.8s and an installed size of 102 MB. The predictive model showed good results with an R² score of 0.35, and RMSE of 0.0012 (meaning that the difference between predicted and actual fill rate was ~0.12% of max bin capacity per second). The system had an overall latency of 15 seconds from input to output.
+
+This integrated system offers a data-driven approach to optimise collection routes and reduce operational costs, providing a scalable solution for modern smart city initiatives.`,
+    mainImage: kncMap,
+    images: [
+      { src: kncMap, caption: "Dynamic map view and routes to waste bins" },
+      { src: kncBinDetails, caption: "Real-time waste bin details" },
+      { src: kncAnalytics, caption: "Waste bin data history and trends" },
+      { src: kncAI, caption: "AI-powered suggestions and alerts" },
+      { src: kncLearn, caption: "Educational materials, videos, and articles on waste management" },
+      { src: kncLocation, caption: "Real-time user location tracking" },
+    ],
+    tools: [
+      "Flutter",
+      "Dart",
+      "Provider",
+      "MVVM",
+      "Mapbox",
+      "Firebase",
+      "Git",
+      "GitHub",
+      "Material UI",
+      "Permissions",
+      "fl_chart",
+      "WebView",
+    ],
+    links: {
+      github: "https://github.com/andy-ife/keep_nigeria_clean",
+      youtube: "https://youtube.com/shorts/oO6jDNoLlGM?feature=share",
+      extra: [
+        { label: "Project Document", url: "#" }, // Placeholder - update with actual link
+      ],
+    },
+  },
 ];

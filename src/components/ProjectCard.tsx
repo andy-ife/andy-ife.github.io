@@ -1,5 +1,5 @@
 import { Project } from "@/data/projects";
-import { ExternalLink, Play } from "lucide-react";
+import { ExternalLink, Play, Github } from "lucide-react";
 import googlePlayBadge from "@/assets/badges/google-play-badge.svg";
 import appStoreBadge from "@/assets/badges/app-store-badge.svg";
 
@@ -72,6 +72,15 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
                 className="transition-opacity hover:opacity-80"
               >
                 <img src={appStoreBadge} alt="Download on the App Store" className="h-10" />
+              </button>
+            )}
+            {project.links.github && (
+              <button
+                onClick={(e) => handleLinkClick(e, project.links.github!)}
+                className="inline-flex items-center gap-1.5 text-link hover:text-link-hover transition-colors"
+              >
+                <Github className="w-4 h-4" />
+                GitHub
               </button>
             )}
             {project.links.youtube && (

@@ -7,7 +7,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, ExternalLink, Play } from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink, Play, Github } from "lucide-react";
 import googlePlayBadge from "@/assets/badges/google-play-badge.svg";
 import appStoreBadge from "@/assets/badges/app-store-badge.svg";
 
@@ -159,6 +159,17 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                     className="transition-opacity hover:opacity-80"
                   >
                     <img src={appStoreBadge} alt="Download on the App Store" className="h-10" />
+                  </a>
+                )}
+                {project.links.github && (
+                  <a
+                    href={project.links.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-link hover:text-link-hover transition-colors"
+                  >
+                    <Github className="w-4 h-4" />
+                    GitHub
                   </a>
                 )}
                 {project.links.youtube && (
