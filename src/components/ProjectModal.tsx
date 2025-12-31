@@ -7,7 +7,9 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, ExternalLink, Play, Smartphone, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink, Play } from "lucide-react";
+import googlePlayBadge from "@/assets/badges/google-play-badge.svg";
+import appStoreBadge from "@/assets/badges/app-store-badge.svg";
 
 interface ProjectModalProps {
   project: Project | null;
@@ -138,16 +140,15 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             {/* Links */}
             <div className="mt-6">
               <h4 className="font-semibold mb-3">Links</h4>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap items-center gap-3">
                 {project.links.playStore && (
                   <a
                     href={project.links.playStore}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-link hover:text-link-hover transition-colors"
+                    className="transition-opacity hover:opacity-80"
                   >
-                    <Smartphone className="w-4 h-4" />
-                    Play Store
+                    <img src={googlePlayBadge} alt="Get it on Google Play" className="h-10" />
                   </a>
                 )}
                 {project.links.appStore && (
@@ -155,10 +156,9 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                     href={project.links.appStore}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-link hover:text-link-hover transition-colors"
+                    className="transition-opacity hover:opacity-80"
                   >
-                    <Smartphone className="w-4 h-4" />
-                    App Store
+                    <img src={appStoreBadge} alt="Download on the App Store" className="h-10" />
                   </a>
                 )}
                 {project.links.youtube && (

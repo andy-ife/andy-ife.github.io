@@ -14,12 +14,11 @@ export const profile = {
   
   introduction: `Android & Flutter developer with 2 years of experience building the complete telemedicine mobile app for TMR International Hospital, Uganda. Has contributed to the open-source Lichess and Wikimedia Commons apps. Has worked on software developer teams at NITDA Nigeria and Federal University of Technology, Minna.`,
   
-  // Update these with your actual social handles
   social: {
-    github: "https://github.com/", // Add your GitHub username
-    linkedin: "https://linkedin.com/in/", // Add your LinkedIn username
-    twitter: "https://twitter.com/", // Add your Twitter handle
-    email: "hello@example.com", // Add your email
+    github: "https://github.com/andy-ife",
+    linkedin: "https://linkedin.com/in/ifeoluwa-omole-6070662a0/",
+    twitter: "https://x.com/AndrewOmole",
+    email: "iomole3@gmail.com",
   },
   
   footer: {

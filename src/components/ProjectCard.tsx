@@ -1,5 +1,7 @@
 import { Project } from "@/data/projects";
-import { ExternalLink, Play, Smartphone } from "lucide-react";
+import { ExternalLink, Play } from "lucide-react";
+import googlePlayBadge from "@/assets/badges/google-play-badge.svg";
+import appStoreBadge from "@/assets/badges/app-store-badge.svg";
 
 interface ProjectCardProps {
   project: Project;
@@ -55,23 +57,21 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
           </div>
 
           {/* Links */}
-          <div className="flex flex-wrap gap-3 text-sm">
+          <div className="flex flex-wrap items-center gap-3 text-sm">
             {project.links.playStore && (
               <button
                 onClick={(e) => handleLinkClick(e, project.links.playStore!)}
-                className="inline-flex items-center gap-1.5 text-link hover:text-link-hover transition-colors"
+                className="transition-opacity hover:opacity-80"
               >
-                <Smartphone className="w-4 h-4" />
-                Play Store
+                <img src={googlePlayBadge} alt="Get it on Google Play" className="h-10" />
               </button>
             )}
             {project.links.appStore && (
               <button
                 onClick={(e) => handleLinkClick(e, project.links.appStore!)}
-                className="inline-flex items-center gap-1.5 text-link hover:text-link-hover transition-colors"
+                className="transition-opacity hover:opacity-80"
               >
-                <Smartphone className="w-4 h-4" />
-                App Store
+                <img src={appStoreBadge} alt="Download on the App Store" className="h-10" />
               </button>
             )}
             {project.links.youtube && (
