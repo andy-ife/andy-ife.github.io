@@ -11,16 +11,16 @@ export const profile = {
   name: "Ifeoluwa Omole",
   greeting: "Hello",
   headshot: headshot,
-  
+
   introduction: `Android & Flutter developer with 2 years of experience building the complete telemedicine mobile app for TMR International Hospital, Uganda. Has contributed to the open-source Lichess and Wikimedia Commons apps. Has worked on software developer teams at NITDA Nigeria and Federal University of Technology, Minna.`,
-  
+
   social: {
     github: "https://github.com/andy-ife",
     linkedin: "https://linkedin.com/in/ifeoluwa-omole-6070662a0/",
-    twitter: "https://x.com/AndrewOmole",
+    twitter: "https://x.com/andyy_ife",
     email: "iomole3@gmail.com",
   },
-  
+
   footer: {
     tagline: "Building mobile experiences that matter.",
     copyright: `© ${new Date().getFullYear()} Ifeoluwa Omole. All rights reserved.`,
