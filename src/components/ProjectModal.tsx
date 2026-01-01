@@ -82,8 +82,8 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             </div>
 
             {/* Caption */}
-            <div className="absolute bottom-12 left-0 right-0 bg-gradient-to-t from-background/90 to-transparent p-4">
-              <p className="text-sm text-center">{currentImage.caption}</p>
+            <div className="absolute bottom-12 left-0 right-0 p-4">
+              <p className="text-sm text-center bg-background/70 backdrop-blur-sm rounded-lg px-3 py-2 mx-auto w-fit max-w-[90%]">{currentImage.caption}</p>
             </div>
 
             {/* Thumbnail strip */}
@@ -140,61 +140,69 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             {/* Links */}
             <div className="mt-6">
               <h4 className="font-semibold mb-3">Links</h4>
-              <div className="flex flex-wrap items-center gap-3">
-                {project.links.playStore && (
-                  <a
-                    href={project.links.playStore}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="transition-opacity hover:opacity-80"
-                  >
-                    <img src={googlePlayBadge} alt="Get it on Google Play" className="h-10" />
-                  </a>
+              <div className="space-y-3">
+                {/* Store links row */}
+                {(project.links.playStore || project.links.appStore) && (
+                  <div className="flex flex-wrap items-center gap-3">
+                    {project.links.playStore && (
+                      <a
+                        href={project.links.playStore}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="transition-opacity hover:opacity-80"
+                      >
+                        <img src={googlePlayBadge} alt="Get it on Google Play" className="h-10" />
+                      </a>
+                    )}
+                    {project.links.appStore && (
+                      <a
+                        href={project.links.appStore}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="transition-opacity hover:opacity-80"
+                      >
+                        <img src={appStoreBadge} alt="Download on the App Store" className="h-10" />
+                      </a>
+                    )}
+                  </div>
                 )}
-                {project.links.appStore && (
-                  <a
-                    href={project.links.appStore}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="transition-opacity hover:opacity-80"
-                  >
-                    <img src={appStoreBadge} alt="Download on the App Store" className="h-10" />
-                  </a>
-                )}
-                {project.links.github && (
-                  <a
-                    href={project.links.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-link hover:text-link-hover transition-colors"
-                  >
-                    <Github className="w-4 h-4" />
-                    GitHub
-                  </a>
-                )}
-                {project.links.youtube && (
-                  <a
-                    href={project.links.youtube}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-link hover:text-link-hover transition-colors"
-                  >
-                    <Play className="w-4 h-4" />
-                    Demo Video
-                  </a>
-                )}
-                {project.links.extra?.map((link) => (
-                  <a
-                    key={link.url}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-link hover:text-link-hover transition-colors"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    {link.label}
-                  </a>
-                ))}
+                {/* Other links row */}
+                <div className="flex flex-wrap items-center gap-3">
+                  {project.links.github && (
+                    <a
+                      href={project.links.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-link hover:text-link-hover transition-colors"
+                    >
+                      <Github className="w-4 h-4" />
+                      GitHub
+                    </a>
+                  )}
+                  {project.links.youtube && (
+                    <a
+                      href={project.links.youtube}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-link hover:text-link-hover transition-colors"
+                    >
+                      <Play className="w-4 h-4" />
+                      Demo Video
+                    </a>
+                  )}
+                  {project.links.extra?.map((link) => (
+                    <a
+                      key={link.url}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-link hover:text-link-hover transition-colors"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
