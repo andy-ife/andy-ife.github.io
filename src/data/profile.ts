@@ -9,7 +9,7 @@ import headshot from "@/assets/headshot.jpg";
 
 export const profile = {
   name: "Ifeoluwa Omole",
-  greeting: "Hello",
+  greeting: "Hello.",
   headshot: headshot,
 
   introduction: `Android & Flutter developer with 2 years of experience building the complete telemedicine mobile app for TMR International Hospital, Uganda. Has contributed to the open-source Lichess and Wikimedia Commons apps. Has worked on software developer teams at NITDA Nigeria and Federal University of Technology, Minna.`,

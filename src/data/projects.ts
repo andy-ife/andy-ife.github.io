@@ -83,7 +83,7 @@ export const projects: Project[] = [
 
 Other features include accurate medication reminders with 100% accuracy in alarming, emergency requests to the hospital from anywhere, live chat support, and a great UX.
 
-The applications have recorded impressive growth, reaching above 1,200 users in only three months, coupled with a 20% rise in revenue and downloadeds, including 1K+ for the Patient app, 50+ for the Doctor app, and 10+ for the Rider app. The platform takes convenience into consideration by offering aid at all times without the need to visit the hospital.`,
+The applications have recorded impressive growth, reaching above 1,200 users in only three months, coupled with a 20% rise in revenue and downloads, including 1K+ for the Patient app, 50+ for the Doctor app, and 10+ for the Rider app. The platform takes convenience into consideration by offering aid at all times without the need to visit the hospital.`,
     mainImage: tmrMain,
     images: [
       { src: tmrMain, caption: "Complete telemedicine app for all your health needs" },
@@ -170,11 +170,11 @@ The applications have recorded impressive growth, reaching above 1,200 users in 
     title: "Geobud",
     shortDescription:
       "A fun geography quiz app where you guess countries from photos of famous landmarks. Features offline play, photo saving, dark/light themes, and progress tracking. Built with Jetpack Compose.",
-    fullDescription: `Geobud is a simple fun geography quiz app that lets you guess countries from their photos. Combining education and entertainment, Geobud provides unique features that make learning about the world an exciting adventure.
+    fullDescription: `Geobud is a simple fun geography quiz app that lets you guess countries from their photos, combining education and entertainment.
 
-Users can test their knowledge by guessing countries based on captivating photos of places and famous landmarks. ✈️ The app allows you to save your favorite photos directly to your phone storage for easy access anytime. ⬇️ It also offers limited offline capability through photo caching, ensuring you can play even without an internet connection.
+Users can test their knowledge by guessing countries based on captivating photos of places and famous landmarks. The app allows you to save your favorite photos directly to your phone storage. It also offers limited offline capability through photo caching.
 
-For added convenience, Geobud will soon let you browse the history of all your past photos and locations, helping you revisit and reflect on your geography journey. The app supports both dark and light modes for comfortable viewing in any lighting condition.
+For added convenience, Geobud will soon let you browse the history of all your past photos and locations. The app supports both dark and light modes.
 
 Built with a single activity design and a clean, simple Jetpack Compose UI, it delivers a seamless and intuitive user experience. Finally, you can reset your progress at any time, allowing you to start fresh and enjoy Geobud all over again!`,
     mainImage: geobudGuess1,
