@@ -69,12 +69,12 @@ export const projects: Project[] = [
     id: "tmr-golden-living",
     title: "TMR Golden Living",
     shortDescription:
-      "A comprehensive telemedicine platform with Patient, Doctor, and Rider apps. Features video consultations, health tracking, medicine delivery, and smartwatch integration.",
-    fullDescription: `TMR Golden Living is a comprehensive telemedicine platform revolutionizing remote healthcare access through its Patient, Doctor, and Rider apps. It enables users to book appointments, conduct real-time video consultations, manage chronic conditions like diabetes and hypertension, access medical history on-demand, order lab tests and medicines with home delivery, and monitor health metrics via smartwatch integration for blood pressure, heart rate, and glucose levels.
+      "A comprehensive telemedicine platform with Patient, Doctor, and Rider apps. Features video consultations, health tracking, medicine delivery, and smartwatch integration. Built by a team of 4 developers, myself included, for TMR International Hospital, Uganda. Grown to 1200+ users in 3 months, and 1K+ downloads on Play Store.",
+    fullDescription: `TMR Golden Living is an all-inclusive telemedicine solution that is transforming the means of accessing healthcare online through its 3 apps: Patient, Doctor, and Rider. Users can book an appointment, conduct online consultancy through video calls, monitor chronic diseases like diabetes and hypertension, access healthcare records, order lab tests and medicines, and track health data using a smartwatch for BP, heart rate, and sugar levels.
 
-Additional features include reliable pill reminders with 100% alarm accuracy, emergency requests with zero error rates, secure data sharing, live chat, and enhanced UI for seamless navigation and delivery tracking.
+Other features include accurate medication reminders with 100% accuracy in alarming, emergency requests to the hospital from anywhere, live chat support, and a great UX.
 
-The apps have driven significant growth, reaching over 1,200 users in three months with a 20% increase in revenue and downloads, including 1K+ downloads for the Patient app, 50+ for the Doctor app, and 10+ for the Rider app. The platform prioritizes convenience, eliminating hospital queues while providing continuous support for everyday health needs.`,
+The applications have recorded impressive growth, reaching above 1,200 users in only three months, coupled with a 20% rise in revenue and downloadeds, including 1K+ for the Patient app, 50+ for the Doctor app, and 10+ for the Rider app. The platform takes convenience into consideration by offering aid at all times without the need to visit the hospital.`,
     mainImage: tmrMain,
     images: [
       { src: tmrMain, caption: "Complete telemedicine app for all your health needs" },
@@ -90,8 +90,10 @@ The apps have driven significant growth, reaching over 1,200 users in three mont
     tools: [
       "Flutter",
       "Dart",
-      "Firebase",
-      "Azure",
+      "Firebase Messaging",
+      "Firebase Authentication",
+      "Firebase Analytics",
+      "Azure CI/CD",
       "GetX",
       "MVVM",
       "Dio",
@@ -99,10 +101,11 @@ The apps have driven significant growth, reaching over 1,200 users in three mont
       "Jitsi",
       "Workmanager",
       "Play Install Referrer",
-      "Socket IO",
+      "socket_io",
       "Pegasus",
       "Flutterwave",
       "Integration Tests",
+      "Unit Tests"
     ],
     links: {
       playStore: "https://play.google.com/store/apps/details?id=com.tmrgoldenliving.appointment_patients&hl=en",
@@ -118,14 +121,8 @@ The apps have driven significant growth, reaching over 1,200 users in three mont
     id: "keep-nigeria-clean",
     title: "Keep Nigeria Clean",
     shortDescription:
-      "An IoT-powered smart waste management system with AI predictions, real-time bin monitoring, and a mobile app for optimizing collection routes in smart cities.",
-    fullDescription: `Municipalities and waste disposal services face challenges such as littering, inefficient collection, and low recycling awareness. This study presents the development of an intelligent system that predicts waste generation rates using an XGBoost regressor. The dataset was built using manually collected data from smart bins and contextual features from existing datasets. The proposed method employs IoT and WiFi connectivity for data monitoring.
-
-Each bin is equipped with sensors that track fill level, air quality, temperature, humidity, and location in real-time, with data transmitted to a cloud server. A mobile application complements the system with a map view of the bins, their statuses, AI predictions, waste trends, and educational materials on recycling and sustainability.
-
-The results from the prototype bins showed efficient power draw (0.37A), providing up to 6 hours of runtime. The mobile app had a launch time of 0.8s and an installed size of 102 MB. The predictive model showed good results with an R² score of 0.35, and RMSE of 0.0012 (meaning that the difference between predicted and actual fill rate was ~0.12% of max bin capacity per second). The system had an overall latency of 15 seconds from input to output.
-
-This integrated system offers a data-driven approach to optimise collection routes and reduce operational costs, providing a scalable solution for modern smart city initiatives.`,
+      "An IoT-powered smart waste management system with AI predictions, real-time bin monitoring, and a mobile app for optimizing collection routes in smart cities. Built as the final year project for my Bachelor's in Computer Engineering.",
+    fullDescription: `Littering, inefficient collection and low recycling awareness are waste management problems which municipalities face daily. This study presents the development of an intelligent system that predicts waste generation rates using an XGBoost regressor.\n\nThe dataset was built using manually collected data from smart bins and contextual features from existing datasets. IoT and WiFi connectivity were used for real time data monitoring.\n\nEach bin is equipped with sensors that track fill level, air quality, temperature, humidity, and location, with data transmitted to a cloud server.\n\nA mobile application works with the system with a map view of the bins, their statuses, AI predictions, waste trends, and educational materials on recycling and sustainability.\n\nThe results from the bins showed efficient power draw (0.37A), providing up to 6 hours of runtime. The mobile app had a launch time of 0.8s and an installed size of 102 MB. The predictive model showed good results with  an R² score of 0.35, and RMSE of 0.0012 (meaning that the difference between predicted and actual fill rate was ~0.12% of max bin capacity per second). The system had an overall latency of 15 seconds from input to output.\n\nThis system offers a modern solution to the problem of solid waste management in municipalities, and can be implemented in both conventional and smart cities.`,
     mainImage: kncMap,
     images: [
       { src: kncMap, caption: "Dynamic map view and routes to waste bins" },
@@ -141,19 +138,21 @@ This integrated system offers a data-driven approach to optimise collection rout
       "Provider",
       "MVVM",
       "Mapbox",
-      "Firebase",
-      "Git",
-      "GitHub",
+      "Firebase Functions",
+      "Firebase Database",
+      "Firebase Firestore",
       "Material UI",
-      "Permissions",
       "fl_chart",
+      "rxdart",
       "WebView",
+      "ESP32",
+      "Arduino C",
     ],
     links: {
       github: "https://github.com/andy-ife/keep_nigeria_clean",
       youtube: "https://youtube.com/shorts/oO6jDNoLlGM?feature=share",
       extra: [
-        { label: "Project Document", url: "#" }, // Placeholder - update with actual link
+        { label: "Project Document", url: "https://docs.google.com/document/d/188F-E3USkaq2wEWMXKyWnr19hmszsUr7E6zmW3j87Zs/edit?usp=sharing" },
       ],
     },
   },
