@@ -36,6 +36,15 @@ import kncAI from "@/assets/projects/knc/D_-_AI_suggestions.jpg";
 import kncLearn from "@/assets/projects/knc/E_-_Learn.jpg";
 import kncLocation from "@/assets/projects/knc/F_-_Location.jpg";
 
+// Geobud Images
+import geobudGuess1 from "@/assets/projects/geobud/A_-_Guess_location.jpg";
+import geobudGuess2 from "@/assets/projects/geobud/B_-_Guess_location.jpg";
+import geobudGuess3 from "@/assets/projects/geobud/C_-_Guess_location.jpg";
+import geobudDetails from "@/assets/projects/geobud/D_-_Location_details.jpg";
+import geobudSave from "@/assets/projects/geobud/E_-_Save_photos.jpg";
+import geobudProgress from "@/assets/projects/geobud/F_-_Track_progress.jpg";
+import geobudThemes from "@/assets/projects/geobud/G_-_Dynamic_themes.jpg";
+
 export interface ProjectImage {
   src: string;
   caption: string;
@@ -154,6 +163,52 @@ The applications have recorded impressive growth, reaching above 1,200 users in 
       extra: [
         { label: "Project Document", url: "https://docs.google.com/document/d/188F-E3USkaq2wEWMXKyWnr19hmszsUr7E6zmW3j87Zs/edit?usp=sharing" },
       ],
+    },
+  },
+  {
+    id: "geobud",
+    title: "Geobud",
+    shortDescription:
+      "A fun geography quiz app where you guess countries from photos of famous landmarks. Features offline play, photo saving, dark/light themes, and progress tracking. Built with Jetpack Compose.",
+    fullDescription: `Geobud is a simple fun geography quiz app that lets you guess countries from their photos. Combining education and entertainment, Geobud provides unique features that make learning about the world an exciting adventure.
+
+Users can test their knowledge by guessing countries based on captivating photos of places and famous landmarks. ✈️ The app allows you to save your favorite photos directly to your phone storage for easy access anytime. ⬇️ It also offers limited offline capability through photo caching, ensuring you can play even without an internet connection.
+
+For added convenience, Geobud will soon let you browse the history of all your past photos and locations, helping you revisit and reflect on your geography journey. The app supports both dark and light modes for comfortable viewing in any lighting condition.
+
+Built with a single activity design and a clean, simple Jetpack Compose UI, it delivers a seamless and intuitive user experience. Finally, you can reset your progress at any time, allowing you to start fresh and enjoy Geobud all over again!`,
+    mainImage: geobudGuess1,
+    images: [
+      { src: geobudGuess1, caption: "Guess the country from famous landmarks" },
+      { src: geobudGuess2, caption: "Test your knowledge with world monuments" },
+      { src: geobudGuess3, caption: "Explore iconic locations around the globe" },
+      { src: geobudDetails, caption: "Learn interesting facts about each location" },
+      { src: geobudSave, caption: "Save your favorite photos to phone storage" },
+      { src: geobudProgress, caption: "Track your progress through the quiz" },
+      { src: geobudThemes, caption: "Dynamic themes with dark and light modes" },
+    ],
+    tools: [
+      "Android",
+      "Kotlin",
+      "Jetpack Compose",
+      "ViewModel",
+      "Coroutines",
+      "Flows",
+      "LiveData",
+      "Retrofit",
+      "Room",
+      "WorkManager",
+      "Hilt",
+      "Preferences Datastore",
+      "Coil",
+      "Gson",
+      "Material UI",
+      "Lottie",
+      "MediaPlayer",
+    ],
+    links: {
+      github: "https://github.com/andy-ife/Geobud",
+      youtube: "https://youtube.com/shorts/I51Jtdkn9lc?feature=share",
     },
   },
 ];
