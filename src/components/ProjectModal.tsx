@@ -76,13 +76,13 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               )}
 
               {/* Image counter */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-background/80 px-3 py-1 rounded-full text-sm">
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-background/80 px-3 py-1 rounded-full text-sm">
                 {currentImageIndex + 1} / {project.images.length}
               </div>
             </div>
 
             {/* Caption */}
-            <div className="absolute bottom-16 left-0 right-0 p-4">
+            <div className="absolute bottom-4 left-0 right-0 p-4">
               <p className="text-sm text-center bg-background/70 backdrop-blur-sm rounded-lg px-3 py-2 mx-auto w-fit max-w-[90%]">{currentImage.caption}</p>
             </div>
 
@@ -92,11 +92,10 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                 <button
                   key={index}
                   onClick={() => setCurrentImageIndex(index)}
-                  className={`flex-shrink-0 w-12 h-12 rounded-md overflow-hidden border-2 transition-all ${
-                    index === currentImageIndex
+                  className={`flex-shrink-0 w-12 h-12 rounded-md overflow-hidden border-2 transition-all ${index === currentImageIndex
                       ? "border-primary"
                       : "border-transparent opacity-60 hover:opacity-100"
-                  }`}
+                    }`}
                 >
                   <img
                     src={img.src}
