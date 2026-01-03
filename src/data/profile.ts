@@ -22,7 +22,7 @@ export const profile = {
   },
 
   footer: {
-    tagline: "Building mobile experiences that matter.",
+    tagline: "I will turn your app idea into reality.",
     copyright: `© ${new Date().getFullYear()} Ifeoluwa Omole. All rights reserved.`,
   },
 };
