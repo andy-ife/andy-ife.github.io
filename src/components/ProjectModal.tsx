@@ -82,7 +82,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             </div>
 
             {/* Caption */}
-            <div className="absolute bottom-12 left-0 right-0 p-4">
+            <div className="absolute bottom-16 left-0 right-0 p-4">
               <p className="text-sm text-center bg-background/70 backdrop-blur-sm rounded-lg px-3 py-2 mx-auto w-fit max-w-[90%]">{currentImage.caption}</p>
             </div>
 
@@ -109,7 +109,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
           </div>
 
           {/* Content */}
-          <div className="lg:w-1/2 overflow-y-auto p-6">
+          <div className="lg:w-1/2 overflow-y-auto p-6 scrollbar-dark">
             <DialogHeader>
               <DialogTitle className="text-2xl font-bold pr-8">
                 {project.title}
