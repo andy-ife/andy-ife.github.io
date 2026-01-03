@@ -167,4 +167,31 @@
   .container-portfolio {
     @apply w-full max-w-4xl mx-auto px-6;
   }
+
+  /* Dark mode scrollbar */
+  .scrollbar-dark {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted-foreground) / 0.3) transparent;
+  }
+
+  .dark .scrollbar-dark {
+    scrollbar-color: hsl(var(--foreground) / 0.4) hsl(var(--muted) / 0.3);
+  }
+
+  .scrollbar-dark::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .scrollbar-dark::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-dark::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 4px;
+  }
+
+  .dark .scrollbar-dark::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--foreground) / 0.4);
+  }
 }
