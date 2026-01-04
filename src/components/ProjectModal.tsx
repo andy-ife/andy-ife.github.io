@@ -47,7 +47,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
           {/* Image Carousel */}
           <div className="lg:w-1/2 bg-muted flex-shrink-0 flex flex-col">
             {/* Image container */}
-            <div className="relative h-[70vh] lg:h-auto lg:flex-1 min-h-0">
+            <div className="relative h-64 lg:h-auto lg:flex-1 min-h-0">
               <img
                 src={currentImage.src}
                 alt={currentImage.caption}
