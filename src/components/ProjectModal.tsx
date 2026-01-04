@@ -42,7 +42,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="max-w-5xl max-h-[90vh] overflow-hidden p-0 w-[calc(100vw-2rem)] sm:w-full">
+      <DialogContent className="max-w-5xl max-h-[90vh] overflow-hidden p-0 w-[calc(100vw-2rem)] sm:w-full rounded-xl">
         <div className="flex flex-col lg:flex-row h-full max-h-[90vh] overflow-hidden">
           {/* Image Carousel */}
           <div className="lg:w-1/2 bg-muted flex-shrink-0 flex flex-col">
