@@ -77,13 +77,6 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               )}
             </div>
 
-            {/* Image counter - desktop only */}
-            <div className="hidden lg:flex justify-center py-2 bg-background/50">
-              <span className="bg-background/80 px-3 py-1 rounded-full text-sm">
-                {currentImageIndex + 1} / {project.images.length}
-              </span>
-            </div>
-
             {/* Caption */}
             <div className="px-4 py-3 bg-background/50">
               <p className="text-sm text-center">{currentImage.caption}</p>
