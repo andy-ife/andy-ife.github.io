@@ -23,6 +23,6 @@ export const profile = {
 
   footer: {
     tagline: "I will turn your app idea into reality.",
-    copyright: `© ${new Date().getFullYear()} Ifeoluwa Omole. All rights reserved.`,
+    copyright: `© ${new Date().getFullYear()} Ifeoluwa Omole. All rights reserved. Website content (text and images) is proprietary. The underlying source code is licensed under the MIT License. Built with Lovable.`,
   },
 };
