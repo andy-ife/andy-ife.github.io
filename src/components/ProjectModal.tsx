@@ -42,8 +42,8 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="max-w-5xl max-h-[90vh] overflow-hidden p-0">
-        <div className="flex flex-col lg:flex-row h-full max-h-[90vh]">
+      <DialogContent className="max-w-5xl max-h-[90vh] overflow-hidden p-0 w-[calc(100vw-2rem)] sm:w-full">
+        <div className="flex flex-col lg:flex-row h-full max-h-[90vh] overflow-hidden">
           {/* Image Carousel */}
           <div className="lg:w-1/2 bg-muted relative flex-shrink-0">
             <div className="relative h-80 lg:h-full">
@@ -82,12 +82,12 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             </div>
 
             {/* Caption */}
-            <div className="absolute bottom-4 left-0 right-0 p-4">
+            <div className="absolute bottom-24 lg:bottom-4 left-0 right-0 px-4">
               <p className="text-sm text-center bg-background/70 backdrop-blur-sm rounded-lg px-3 py-2 mx-auto w-fit max-w-[90%]">{currentImage.caption}</p>
             </div>
 
             {/* Thumbnail strip */}
-            <div className="flex gap-2 p-3 overflow-x-auto bg-background/50">
+            <div className="flex gap-2 p-3 pt-4 lg:pt-3 overflow-x-auto bg-background/50">
               {project.images.map((img, index) => (
                 <button
                   key={index}
