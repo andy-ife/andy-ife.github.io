@@ -45,50 +45,53 @@ function ImageCarousel({
   const currentImage = project.images[currentImageIndex];
 
   return (
-    <div className="flex flex-col h-full">
-      {/* Image container */}
-      <div className="relative flex-1 min-h-0 flex items-center justify-center bg-muted px-12">
+    <div className="flex flex-col h-full p-2">
+      {/* Image container with arrows inside */}
+      <div className="relative flex-1 min-h-0 flex items-center justify-center bg-muted rounded-lg overflow-hidden">
+        {/* Left arrow */}
+        {project.images.length > 1 && (
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute left-1 top-1/2 -translate-y-1/2 z-10 bg-background/80 hover:bg-background rounded-full w-8 h-8"
+            onClick={handlePrevImage}
+          >
+            <ChevronLeft className="w-4 h-4" />
+          </Button>
+        )}
+
+        {/* Image - constrained to leave room for arrows */}
         <img
           src={currentImage.src}
           alt={currentImage.caption}
-          className="max-w-full max-h-full object-contain"
+          className="max-w-[calc(100%-5rem)] max-h-full object-contain"
         />
 
-        {/* Navigation arrows */}
+        {/* Right arrow */}
         {project.images.length > 1 && (
-          <>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute left-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background rounded-full w-10 h-10"
-              onClick={handlePrevImage}
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background rounded-full w-10 h-10"
-              onClick={handleNextImage}
-            >
-              <ChevronRight className="w-5 h-5" />
-            </Button>
-          </>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute right-1 top-1/2 -translate-y-1/2 z-10 bg-background/80 hover:bg-background rounded-full w-8 h-8"
+            onClick={handleNextImage}
+          >
+            <ChevronRight className="w-4 h-4" />
+          </Button>
         )}
       </div>
 
       {/* Caption */}
-      <div className="px-4 py-2 bg-background/50 text-center flex-shrink-0">
-        <p className="text-sm">{currentImage.caption}</p>
+      <div className="px-2 py-1.5 text-center flex-shrink-0">
+        <p className="text-xs text-muted-foreground">{currentImage.caption}</p>
       </div>
 
       {/* Thumbnail strip */}
-      <div className="flex gap-2 p-3 mx-2 my-2 overflow-x-auto bg-background/50 rounded-lg flex-shrink-0">
+      <div className="flex gap-1.5 p-2 overflow-x-auto bg-muted/50 rounded-lg flex-shrink-0">
         {project.images.map((img, index) => (
           <button
             key={index}
             onClick={() => setCurrentImageIndex(index)}
-            className={`flex-shrink-0 w-12 h-12 rounded-md overflow-hidden border-2 transition-all ${
+            className={`flex-shrink-0 w-10 h-10 rounded-md overflow-hidden border-2 transition-all ${
               index === currentImageIndex
                 ? "border-primary"
                 : "border-transparent opacity-60 hover:opacity-100"
@@ -220,17 +223,7 @@ function MobileProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="max-w-full h-[100dvh] max-h-[100dvh] overflow-hidden p-0 w-full rounded-none border-0 [&>[data-dialog-close]]:hidden">
-        {/* Close button */}
-        <Button
-          variant="ghost"
-          size="icon"
-          className="absolute top-3 right-3 z-50 w-10 h-10 rounded-full bg-background/80 hover:bg-background shadow-md"
-          onClick={onClose}
-        >
-          <X className="w-5 h-5" />
-        </Button>
-
+      <DialogContent className="max-w-[calc(100vw-2rem)] h-[calc(100dvh-2rem)] max-h-[calc(100dvh-2rem)] overflow-hidden p-0 rounded-xl border border-border [&>[data-dialog-close]]:hidden">
         <Tabs defaultValue="screenshots" className="flex flex-col h-full">
           <TabsList className="w-full rounded-none border-b bg-background flex-shrink-0 h-12">
             <TabsTrigger value="screenshots" className="flex-1 gap-2">
@@ -242,6 +235,16 @@ function MobileProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               Description
             </TabsTrigger>
           </TabsList>
+
+          {/* Close button - positioned below tab bar */}
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute top-14 right-2 z-50 w-9 h-9 rounded-full bg-background/80 hover:bg-background shadow-md"
+            onClick={onClose}
+          >
+            <X className="w-4 h-4" />
+          </Button>
 
           <TabsContent value="screenshots" className="flex-1 min-h-0 m-0 data-[state=inactive]:hidden">
             <ImageCarousel 
