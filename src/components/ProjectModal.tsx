@@ -244,7 +244,7 @@ function MobileProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
           <Button
             variant="ghost"
             size="icon"
-            className="absolute top-16 right-4 z-30 w-9 h-9 rounded-full bg-background/80 hover:bg-background shadow-md"
+            className="absolute top-[4.5rem] right-6 z-30 w-9 h-9 rounded-full bg-background/80 hover:bg-background shadow-md"
             onClick={onClose}
             aria-label="Close modal"
           >
