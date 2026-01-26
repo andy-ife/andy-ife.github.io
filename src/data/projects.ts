@@ -128,7 +128,7 @@ The applications reached above 1,200 users in only three months, with a 20% rise
   },
   {
     id: "keep-nigeria-clean",
-    title: "Keep Nigeria Clean",
+    title: "CHES-BIN",
     shortDescription:
       "An IoT waste management system with real-time bin monitoring, AI waste generation predictions, and a mobile app for optimizing pickup routes.",
     fullDescription: `Littering, inefficient collection and low recycling awareness are waste management problems which municipalities face daily. Here, I present the development of an intelligent system that predicts waste generation rates using an XGBoost regressor.\n\nThe dataset was built using manually collected data from the smart bins and contextual features from existing datasets. IoT and WiFi connectivity were used for real time data monitoring.\n\nEach bin is equipped with sensors that track fill level, air quality, temperature, humidity, and location, with data sent to Firebase regularly.\n\nThe mobile app complements the system with a map view of the bins, their statuses, routing, waste trends, and educational materials on recycling and sustainability.`,
