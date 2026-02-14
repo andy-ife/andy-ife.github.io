@@ -35,6 +35,7 @@ import kncAnalytics from "@/assets/projects/knc/C_-_Analytics.jpg";
 import kncAI from "@/assets/projects/knc/D_-_AI_suggestions.jpg";
 import kncLearn from "@/assets/projects/knc/E_-_Learn.jpg";
 import kncLocation from "@/assets/projects/knc/F_-_Location.jpg";
+import kncBin from "@/assets/projects/knc/G_-_Waste_bin.jpg";
 
 // Geobud Images
 import geobudGuess1 from "@/assets/projects/geobud/A_-_Guess_location.jpg";
@@ -140,6 +141,7 @@ The applications reached above 1,200 users in only three months, with a 20% rise
       { src: kncAI, caption: "AI-powered suggestions and alerts" },
       { src: kncLearn, caption: "Educational materials, videos, and articles on waste management" },
       { src: kncLocation, caption: "Real-time user location tracking" },
+      { src: kncBin, caption: "The intelligent waste bin"}
     ],
     tools: [
       "Flutter",
